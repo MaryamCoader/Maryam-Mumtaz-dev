@@ -12,7 +12,7 @@ const experienceData = [
         location: "Remote / Karachi",
         type: "Full-Time",
         highlights: [
-            "Engineered 550+ advanced AI agents using OpenAI SDK, LangChain, and CrewAI for global clients.",
+            "Engineered 150+ advanced AI agents using OpenAI SDK, LangChain, and CrewAI for global clients.",
             "Architected intelligent automation workflows reducing manual data processing by up to 60%.",
             "Developed conversational AI systems integrated with n8n and custom Python backends.",
             "Delivered high-performance web platforms for startups using Next.js and Cloud-native architectures."
@@ -23,7 +23,7 @@ const experienceData = [
 
 export default function Experience() {
     return (
-        <Section id="experience" className="bg-[#030014] relative py-16 md:py-24 overflow-hidden">
+        <Section id="experience" className="bg-[#030014] relative py-20 md:py-32 overflow-hidden">
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[10%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />

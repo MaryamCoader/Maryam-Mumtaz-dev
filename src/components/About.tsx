@@ -90,17 +90,17 @@ export default function About() {
                                 {/* Tech Badges - Larger & Animated */}
                                 <div className="flex flex-wrap gap-2 justify-center">
                                     {[
-                                        { name: "Next.js", color: "bg-blue-600" },
-                                        { name: "React", color: "bg-blue-600" },
-                                        { name: "Tailwind", color: "bg-cyan-600" },
-                                        { name: "OpenAI SDK", color: "bg-purple-600" },
-                                        { name: "Python", color: "bg-pink-600" },
-                                        { name: "n8n", color: "bg-green-600" },
+                                        { name: "Agentic AI", color: "bg-purple-600" },
+                                        { name: "Kubernetes", color: "bg-blue-600" },
+                                        { name: "Cloud & DevOps", color: "bg-cyan-600" },
+                                        { name: "Next.js 15", color: "bg-slate-700" },
+                                        { name: "FastAPI", color: "bg-teal-600" },
+                                        { name: "Full-Stack", color: "bg-blue-600" },
                                     ].map((tech) => (
                                         <motion.span
                                             key={tech.name}
                                             whileHover={{ scale: 1.1, translateY: -2 }}
-                                            className={`px-3 py-1.5 ${tech.color} text-white rounded text-xs font-semibold cursor-default shadow-lg shadow-black/20`}
+                                            className={`px-3 py-1.5 ${tech.color} text-white rounded text-xs font-semibold cursor-default shadow-lg shadow-black/20 uppercase tracking-tighter`}
                                         >
                                             {tech.name}
                                         </motion.span>
@@ -151,17 +151,13 @@ export default function About() {
                                 >
                                     <p className="leading-relaxed">
                                         I am an <span className="text-blue-400 font-semibold">AI Agent Engineer & Full-Stack Developer</span> based
-                                        in Karachi, Sindh. I build offline and cloud-enabled AI assistants, automation workflows, and scalable web
-                                        platforms using Next.js, React, TypeScript, Python/Django, Tailwind CSS, and Sanity CMS.
+                                        in Karachi, Sindh. I specialize in architecting <span className="text-purple-400 font-bold uppercase tracking-tight">Agentic Infrastructure</span>—leveraging reusable intelligence and cloud-native systems to build the next generation of autonomous applications.
                                     </p>
                                     <p className="leading-relaxed">
-                                        I have successfully delivered 150+ real-world projects, including 7+ e-commerce platforms with advanced
-                                        integrations such as Stripe and ShipEngine.
+                                        As a top-performing participant in national-level hackathons, I have achieved significant milestones, including being among the <span className="text-cyan-400 font-bold">first to submit across multiple stages</span> of the Eventon Hackathon series. My expertise spans from building AI-native textbook platforms to complex microservices architectures on Kubernetes.
                                     </p>
                                     <p className="leading-relaxed">
-                                        My journey into AI and automation began with a deep curiosity about how technology can simplify and enhance
-                                        everyday life. Since then, I have engineered 550+ advanced AI agents—leveraging OpenAI SDK, LangChain,
-                                        HuggingFace, CrewAI, Chainlit, and Streamlit—focused on automation, productivity, and intelligent problem-solving.
+                                        I have successfully delivered 50+ real-world projects, mastering advanced tools like <span className="text-white font-bold italic">Claude Code, Goose, Kafka, and Dapr</span>. My technical journey is defined by a 90%+ reduction in token usage through optimized execution patterns and the creation of portable AI skills for autonomous infrastructure.
                                     </p>
                                 </motion.div>
                             )}
@@ -173,22 +169,23 @@ export default function About() {
                                     className="space-y-6"
                                 >
                                     <div>
-                                        <h4 className="text-lg font-bold text-white mb-2">AI Automation Specialist</h4>
-                                        <p className="text-blue-400 text-sm mb-3">2024 - Present</p>
+                                        <h4 className="text-lg font-bold text-white mb-2">Cloud-Native AI Architect</h4>
+                                        <p className="text-cyan-400 text-sm mb-3 font-black uppercase tracking-widest">Eventon Hackathon Submission Specialist</p>
                                         <ul className="space-y-2 text-slate-300 text-sm">
-                                            <li>• Engineered 550+ advanced AI agents using OpenAI SDK, LangChain, CrewAI</li>
-                                            <li>• Built intelligent automation workflows reducing manual processes by 40-60%</li>
-                                            <li>• Developed conversational AI and workflow automation systems</li>
+                                            <li>• Pioneered "Reusable Intelligence" skills for autonomous infrastructure management.</li>
+                                            <li>• Mastered Spec-Driven Development (SDD) to architect complex systems without manual boilerplate.</li>
+                                            <li>• Deployed distributed AI microservices using Kafka, Dapr, and Helm on DigitalOcean Kubernetes (DOKS).</li>
+                                            <li>• Achieved historic "early-submission" status across all three stages of national hackathons.</li>
                                         </ul>
                                     </div>
 
                                     <div>
-                                        <h4 className="text-lg font-bold text-white mb-2">Full-Stack Developer</h4>
+                                        <h4 className="text-lg font-bold text-white mb-2">AI Agent Engineer & Full-Stack Developer</h4>
                                         <p className="text-purple-400 text-sm mb-3">2023 - Present</p>
                                         <ul className="space-y-2 text-slate-300 text-sm">
-                                            <li>• Delivered 150+ real-world projects including 7+ e-commerce platforms</li>
-                                            <li>• Built scalable web platforms with Next.js, React, TypeScript, Python</li>
-                                            <li>• Integrated advanced payment systems (Stripe) and shipping APIs</li>
+                                            <li>• Engineered 150+ advanced AI agents using OpenAI SDK, LangChain, and MCP protocols.</li>
+                                            <li>• Built 50+ full-stack projects including production-ready RAG platforms and E-commerce sites.</li>
+                                            <li>• Integrated advanced payment gateways (Stripe) and AI-driven supply chain solutions.</li>
                                         </ul>
                                     </div>
                                 </motion.div>
@@ -235,42 +232,44 @@ export default function About() {
                                     animate={{ opacity: 1 }}
                                     className="space-y-6"
                                 >
-                                    <div>
-                                        <h4 className="text-white font-bold mb-3 text-base">Full-Stack Development</h4>
-                                        <div className="flex flex-wrap gap-2">
-                                            {["Python", "JavaScript", "PHP", "Java", "SQL", "Next.js", "React", "HTML/CSS", "Tailwind"].map((tech, i) => (
-                                                <span key={i} className="px-3 py-1.5 bg-blue-600/20 text-blue-300 rounded text-xs border border-blue-600/30 font-medium">
-                                                    {tech}
-                                                </span>
-                                            ))}
+                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                        <div>
+                                            <h4 className="text-white font-bold mb-3 text-sm uppercase tracking-wider">Cloud & Platforms</h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {["AWS", "GCP", "Vercel", "DigitalOcean", "Firebase", "Neon", "Supabase", "Cloudflare"].map((tech, i) => (
+                                                    <span key={i} className="px-2.5 py-1 bg-cyan-600/10 text-cyan-400 rounded-md text-[10px] border border-cyan-600/20 font-bold uppercase">
+                                                        {tech}
+                                                    </span>
+                                                ))}
+                                            </div>
+                                        </div>
+
+                                        <div>
+                                            <h4 className="text-white font-bold mb-3 text-sm uppercase tracking-wider">DevOps & Tooling</h4>
+                                            <div className="flex flex-wrap gap-2">
+                                                {["Docker", "K8s", "Helm", "Kafka", "Dapr", "Argo CD", "Claude Code", "Goose"].map((tool, i) => (
+                                                    <span key={i} className="px-2.5 py-1 bg-purple-600/10 text-purple-400 rounded-md text-[10px] border border-purple-600/20 font-bold uppercase">
+                                                        {tool}
+                                                    </span>
+                                                ))}
+                                            </div>
                                         </div>
                                     </div>
 
-                                    <div>
-                                        <h4 className="text-white font-bold mb-3 text-base">AI & Automation</h4>
-                                        <div className="flex flex-wrap gap-2">
-                                            {["OpenAI SDK", "LangChain", "CrewAI", "Streamlit", "HuggingFace", "Chainlit"].map((tool, i) => (
-                                                <span key={i} className="px-3 py-1.5 bg-purple-600/20 text-purple-300 rounded text-xs border border-purple-600/30 font-medium">
-                                                    {tool}
-                                                </span>
-                                            ))}
-                                        </div>
-                                    </div>
-
-                                    <div>
-                                        <h4 className="text-white font-bold mb-3 text-base">Core Competencies</h4>
-                                        <div className="grid grid-cols-2 gap-2 text-slate-300 text-sm">
+                                    <div className="pt-4">
+                                        <h4 className="text-white font-bold mb-3 text-sm uppercase tracking-wider">AI Execution Patterns</h4>
+                                        <div className="grid grid-cols-2 gap-3 text-slate-300 text-sm font-medium italic">
                                             {[
-                                                "Agentic AI Design",
-                                                "Workflow Automation",
-                                                "Database Optimization",
-                                                "RESTful APIs",
-                                                "E-commerce Integration",
-                                                "Cloud AI Systems"
+                                                "Spec-Driven Development (SDD)",
+                                                "MCP Code Execution",
+                                                "Reusable Intelligence (Skills)",
+                                                "System Triage Orchestration",
+                                                "Autonomous Infrastructure",
+                                                "GitOps Deployment"
                                             ].map((skill, i) => (
                                                 <div key={i} className="flex items-center gap-2">
-                                                    <div className="w-1.5 h-1.5 bg-cyan-400 rounded-full" />
-                                                    <span>{skill}</span>
+                                                    <div className="w-1 h-1 bg-cyan-400 rounded-full" />
+                                                    <span className="text-xs">{skill}</span>
                                                 </div>
                                             ))}
                                         </div>
@@ -280,44 +279,74 @@ export default function About() {
 
                             {activeTab === "ai-journey" && (
                                 <motion.div
-                                    initial={{ opacity: 0 }}
-                                    animate={{ opacity: 1 }}
-                                    className="space-y-5"
+                                    initial={{ opacity: 0, x: 20 }}
+                                    animate={{ opacity: 1, x: 0 }}
+                                    className="space-y-8"
                                 >
-                                    <h3 className="text-blue-400 text-xl font-bold">My AI Journey</h3>
-                                    <p className="text-slate-300 text-base leading-relaxed">
-                                        Building intelligent agents and automation for real impact. 550+ agents spanning conversational AI, data
-                                        analysis, business intelligence, and workflow orchestration using OpenAI SDK, LangChain, HuggingFace,
-                                        CrewAI, Chainlit, and Streamlit.
-                                    </p>
+                                    <div className="relative">
+                                        <div className="absolute -left-4 top-0 w-1 h-full bg-gradient-to-b from-blue-500 to-purple-600 rounded-full" />
+                                        <h3 className="text-2xl md:text-3xl font-black text-white uppercase tracking-tighter leading-none mb-2">
+                                            The Architect&apos;s <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 to-blue-500 italic">Odyssey</span>
+                                        </h3>
+                                        <p className="text-slate-500 text-xs font-bold uppercase tracking-[0.3em]">Engineering Intelligence</p>
+                                    </div>
 
-                                    {/* Stats Grid */}
-                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-6">
-                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-5 group hover:border-cyan-500/50 transition-colors">
-                                            <div className="text-3xl font-black text-cyan-400 mb-1">550+</div>
-                                            <div className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Agents Built</div>
+                                    <div className="space-y-6 text-slate-300 text-sm md:text-base leading-relaxed font-medium">
+                                        <p>
+                                            My AI journey began with a simple question: <span className="text-cyan-400 italic">"How can we move beyond static code to systems that think?"</span> This curiosity led me to pivot from traditional full-stack development to the frontier of <span className="text-purple-400 font-bold">Agentic AI</span>. I started by mastering the basics of LLM integration, but quickly realized that the future belongs to autonomous agents capable of complex reasoning and independent execution.
+                                        </p>
+
+                                        <p>
+                                            Over the past year, I have engineered over <span className="text-blue-400 font-bold text-lg">150+ Advanced AI Agents</span>, moving from simple chatbots to sophisticated <span className="text-purple-400 font-bold">multi-agent orchestrations</span>. I have mastered the <span className="text-cyan-400 font-bold uppercase tracking-tight">Model Context Protocol (MCP)</span>, allowing my agents to interact with real-world databases and local system resources, and pioneered <span className="text-white font-bold italic">Spec-Driven Development (SDD)</span> workflows that automate the architectural heavy-lifting of software engineering.
+                                        </p>
+
+                                        <div className="relative px-6 py-4 rounded-2xl bg-white/[0.03] border border-white/10 group hover:border-cyan-500/30 transition-all duration-500">
+                                            <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-blue-500/5 to-purple-500/5 opacity-0 group-hover:opacity-100 transition-opacity rounded-2xl" />
+                                            <p className="relative z-10 italic text-slate-300 text-sm md:text-base">
+                                                &quot;I don&apos;t just build agents; I architect ecosystems where intelligence is a reusable skill, and infrastructure is managed by the very systems it supports.&quot;
+                                            </p>
                                         </div>
-                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-5 group hover:border-blue-500/50 transition-colors">
-                                            <div className="text-3xl font-black text-blue-400 mb-1">50+</div>
-                                            <div className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">UI Projects</div>
-                                        </div>
-                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-5 group hover:border-purple-500/50 transition-colors">
-                                            <div className="text-3xl font-black text-purple-400 mb-1">7+</div>
-                                            <div className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">E-commerce</div>
-                                        </div>
-                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-5 group hover:border-cyan-500/50 transition-colors">
-                                            <div className="text-3xl font-black text-cyan-400 mb-1">150+</div>
-                                            <div className="text-[10px] text-slate-400 uppercase tracking-widest font-bold">Projects</div>
+
+                                        <p>
+                                            A defining milestone in my journey has been my consistency in national technical arenas. In the <strong className="text-white">Eventon Hackathon series</strong>, I achieved a historic record by being among the <span className="text-cyan-400 font-bold">first to submit across all three stages</span>, proving my ability to architect and deploy complex, cloud-native AI systems under intense pressure.
+                                        </p>
+
+                                        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                            {[
+                                                { title: "LearnFlow Platform", desc: "Multi-agent tutor with struggle detection.", color: "bg-purple-500" },
+                                                { title: "AI-Native Textbooks", desc: "RAG-powered educational systems.", color: "bg-blue-500" },
+                                                { title: "Distributed Todo", desc: "K8s-deployed Cloud-Native system.", color: "bg-cyan-500" },
+                                                { title: "Reusable Skills", desc: "20+ coding skills for Claude Code.", color: "bg-teal-500" },
+                                            ].map((item, i) => (
+                                                <div key={i} className="flex gap-3 p-3 rounded-xl bg-white/5 border border-white/5 hover:border-white/10 transition-all">
+                                                    <div className={`w-1 h-full ${item.color} rounded-full flex-shrink-0`} />
+                                                    <div>
+                                                        <h5 className="text-xs font-black text-white uppercase tracking-wider">{item.title}</h5>
+                                                        <p className="text-[10px] text-slate-500 font-bold uppercase tracking-tight">{item.desc}</p>
+                                                    </div>
+                                                </div>
+                                            ))}
                                         </div>
                                     </div>
 
-                                    {/* Tech Badges */}
-                                    <div className="flex flex-wrap gap-2 pt-2">
-                                        {["OpenAI SDK", "LangChain", "HuggingFace", "CrewAI", "Chainlit", "Streamlit", "MCP", "RAG", "Vector DBs"].map((tech, i) => (
-                                            <span key={i} className="px-3 py-1.5 bg-slate-800 text-slate-200 rounded text-xs border border-slate-700 font-medium">
-                                                {tech}
-                                            </span>
-                                        ))}
+                                    {/* Stats Grid */}
+                                    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
+                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 group hover:border-cyan-500/50 transition-colors">
+                                            <div className="text-2xl font-black text-cyan-400 mb-0.5">150+</div>
+                                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Agents Built</div>
+                                        </div>
+                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 group hover:border-blue-500/50 transition-colors text-center">
+                                            <div className="text-2xl font-black text-blue-400 mb-0.5">1st</div>
+                                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Hackathon Submissions</div>
+                                        </div>
+                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 group hover:border-purple-500/50 transition-colors">
+                                            <div className="text-2xl font-black text-purple-400 mb-0.5">90%+</div>
+                                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Token Efficiency</div>
+                                        </div>
+                                        <div className="bg-white/5 backdrop-blur-md border border-white/10 rounded-xl p-4 group hover:border-cyan-500/50 transition-colors">
+                                            <div className="text-2xl font-black text-cyan-400 mb-0.5">50+</div>
+                                            <div className="text-[9px] text-slate-500 uppercase tracking-widest font-bold">Deployment Success</div>
+                                        </div>
                                     </div>
                                 </motion.div>
                             )}

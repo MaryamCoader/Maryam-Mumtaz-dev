@@ -8,8 +8,8 @@ import { projectsData } from "@/lib/projects";
 import ProjectCard from "./ProjectCard";
 
 export default function Projects() {
-    // Show only first 8 projects on homepage
-    const featuredProjects = projectsData.slice(0, 8);
+    // Show all curated projects
+    const featuredProjects = projectsData;
 
     return (
         <Section id="projects" className="bg-[#030014] relative py-20 md:py-32 overflow-hidden">

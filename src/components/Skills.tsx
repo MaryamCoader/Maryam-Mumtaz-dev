@@ -2,61 +2,99 @@
 
 import Section from "./ui/Section";
 import { motion } from "framer-motion";
-import { Code, Palette, Database, BrainCircuit } from "lucide-react";
+import { Code, Palette, Database, BrainCircuit, Cloud, Server, Terminal } from "lucide-react";
 
-const skillsData = [
+interface SkillItem {
+    name: string;
+    level: number;
+}
+
+interface SkillCategory {
+    title: string;
+    icon: React.ReactNode;
+    description: string;
+    skills: SkillItem[];
+    tags?: string[];
+    badge?: string;
+}
+
+const skillsData: SkillCategory[] = [
     {
         title: "Full Stack",
         icon: <Code size={24} />,
         description: "Building robust, scalable web applications.",
         skills: [
-            { name: "Next.js", level: 95 },
+            { name: "Next.js", level: 98 },
             { name: "React", level: 95 },
-            { name: "TypeScript", level: 90 },
-            { name: "Python/Django", level: 85 },
-            { name: "JavaScript", level: 95 },
-            { name: "PHP/MySQL", level: 88 }
+            { name: "TypeScript", level: 95 },
+            { name: "Python/FastAPI", level: 90 },
+            { name: "MySQL/PostgreSQL", level: 92 }
         ],
+        tags: ["JavaScript", "Django", "PHP", "Prisma", "Drizzle"]
     },
     {
         title: "AI & Agents",
         icon: <BrainCircuit size={24} />,
         description: "Intelligent automation & agentic solutions.",
         skills: [
-            { name: "OpenAI SDK", level: 95 },
-            { name: "LangChain", level: 90 },
+            { name: "OpenAI SDK", level: 98 },
             { name: "Agentic AI", level: 95 },
-            { name: "n8n Automation", level: 92 },
+            { name: "LangChain", level: 90 },
             { name: "Prompt Eng.", level: 98 },
-            { name: "Vector DBs", level: 85 }
+            { name: "MCP Protocol", level: 92 }
         ],
+        tags: ["n8n", "Vector DBs", "RAG", "Subagents", "Skills"],
         badge: "In Progress - PIAIC",
     },
     {
-        title: "Tools & Cloud",
-        icon: <Database size={24} />,
-        description: "Modern toolchain for efficient delivery.",
+        title: "Cloud Platforms",
+        icon: <Cloud size={24} />,
+        description: "Global infra for modern applications.",
         skills: [
-            { name: "VS Code", level: 98 },
-            { name: "Git/GitHub", level: 95 },
-            { name: "Docker", level: 80 },
-            { name: "Vercel", level: 95 },
-            { name: "Postman", level: 90 },
-            { name: "Linux/WSL", level: 85 }
+            { name: "Vercel", level: 98 },
+            { name: "DigitalOcean", level: 90 },
+            { name: "AWS", level: 85 },
+            { name: "Firebase", level: 95 },
+            { name: "Neon Database", level: 92 }
         ],
+        tags: ["GCP", "Azure", "Render", "Railway", "Heroku", "Netlify", "Linode", "Cloudflare", "Supabase", "PlanetScale", "MongoDB Atlas"]
+    },
+    {
+        title: "DevOps & Containers",
+        icon: <Server size={24} />,
+        description: "Orchestrating resilient microservices.",
+        skills: [
+            { name: "Docker", level: 95 },
+            { name: "Kubernetes", level: 88 },
+            { name: "Minikube", level: 92 },
+            { name: "Helm Charts", level: 85 },
+            { name: "kubectl-ai", level: 90 }
+        ],
+        tags: ["Kagent", "Podman", "Dapr", "Kafka", "Linux/WSL", "CI/CD"]
     },
     {
         title: "UI/UX Design",
         icon: <Palette size={24} />,
         description: "Beautiful digital interfaces & brand assets.",
         skills: [
-            { name: "Figma", level: 92 },
-            { name: "Illustrator", level: 88 },
-            { name: "Photoshop", level: 85 },
-            { name: "UI/UX Design", level: 90 },
-            { name: "Canva", level: 95 },
-            { name: "Logo Design", level: 85 }
+            { name: "Figma", level: 95 },
+            { name: "UI/UX Design", level: 92 },
+            { name: "Canva", level: 98 },
+            { name: "Tailwind CSS", level: 95 }
         ],
+        tags: ["Illustrator", "Photoshop", "Logo Design", "Motion Design", "Branding"]
+    },
+    {
+        title: "Tools & Workflow",
+        icon: <Terminal size={24} />,
+        description: "The modern developer's productivity stack.",
+        skills: [
+            { name: "VS Code", level: 98 },
+            { name: "Git/GitHub", level: 95 },
+            { name: "Postman", level: 92 },
+            { name: "Claude Code", level: 95 }
+        ],
+        tags: ["Goose", "GitHub Actions", "Zsh", "Vim", "Markdown", "Jira"]
     },
 ];
 
@@ -109,19 +147,20 @@ export default function Skills() {
                     initial="hidden"
                     whileInView="show"
                     viewport={{ once: true, margin: "-100px" }}
-                    className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 items-stretch"
+                    className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch"
                 >
                     {skillsData.map((skill, idx) => (
                         <motion.div
                             key={idx}
                             variants={item}
                             whileHover={{ y: -5 }}
-                            className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 p-6 lg:p-8 rounded-3xl group flex flex-col h-full shadow-2xl"
+                            className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 p-6 lg:p-8 rounded-3xl group flex flex-col h-full shadow-2xl overflow-hidden"
                         >
-                            {/* Glow Effect on Hover */}
-                            <div className="relative z-10">
+                            {/* Animated Background Gradient for intensity */}
+                            <div className="absolute -inset-[100%] bg-[conic-gradient(from_0deg,transparent_0,transparent_70%,rgba(6,182,212,0.1)_80%,transparent_90%)] animate-[spin_8s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+
+                            <div className="relative z-10 flex flex-col h-full">
                                 <div className="mb-4 w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all duration-500">
-                                    {/* Monochromatic Cyan Icons for cleaner look */}
                                     <div className="text-cyan-400">
                                         {skill.icon}
                                     </div>
@@ -129,11 +168,11 @@ export default function Skills() {
                                 <h3 className="text-xl font-bold mb-3 text-white tracking-tight group-hover:text-cyan-400 transition-colors">
                                     {skill.title}
                                 </h3>
-                                <p className="text-slate-400 text-[13px] mb-6 leading-relaxed flex-grow line-clamp-2">
+                                <p className="text-slate-400 text-[13px] mb-6 leading-relaxed line-clamp-2 italic">
                                     {skill.description}
                                 </p>
 
-                                <div className="space-y-4 mt-auto">
+                                <div className="space-y-4 mb-8">
                                     {skill.skills.map(s => (
                                         <div key={s.name} className="space-y-1.5">
                                             <div className="flex justify-between items-center text-[10px] uppercase tracking-wider font-bold">
@@ -153,8 +192,23 @@ export default function Skills() {
                                     ))}
                                 </div>
 
+                                {skill.tags && (
+                                    <div className="mt-auto space-y-3">
+                                        <div className="flex flex-wrap gap-1.5">
+                                            {skill.tags.map(tag => (
+                                                <span
+                                                    key={tag}
+                                                    className="px-2 py-0.5 rounded-md bg-white/5 border border-white/10 text-[9px] font-bold text-slate-400 uppercase tracking-tighter group-hover:text-cyan-300 group-hover:border-cyan-500/30 transition-all"
+                                                >
+                                                    {tag}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    </div>
+                                )}
+
                                 {skill.badge && (
-                                    <div className="mt-8 pt-6 border-t border-white/10">
+                                    <div className="mt-6 pt-6 border-t border-white/10">
                                         <span className="text-xs font-bold text-purple-400 flex items-center gap-2">
                                             <div className="w-1.5 h-1.5 rounded-full bg-purple-400 animate-pulse" />
                                             {skill.badge}

@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Folder, Github, ExternalLink } from "lucide-react";
 import Link from "next/link";
+import Image from "next/image";
 
 interface ProjectCardProps {
     project: {
@@ -11,6 +12,7 @@ interface ProjectCardProps {
         description: string;
         tech: string[];
         links: { github: string; live: string };
+        image?: string;
         color: string;
     };
     index: number;
@@ -24,28 +26,31 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             whileHover={{ y: -12, scale: 1.03 }}
-            className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] border border-slate-800/50 hover:border-cyan-500/50 transition-all duration-500 shadow-2xl hover:shadow-cyan-500/30 h-[420px] flex flex-col"
+            className="group relative rounded-3xl overflow-hidden bg-gradient-to-br from-[#0a0a0a] via-[#0f0f0f] to-[#0a0a0a] border border-slate-800/50 hover:border-cyan-500/50 transition-all duration-500 shadow-2xl hover:shadow-cyan-500/30 h-[480px] flex flex-col"
         >
             {/* Animated Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-purple-500/0 group-hover:from-cyan-500/10 group-hover:via-blue-500/10 group-hover:to-purple-500/10 transition-all duration-500 rounded-3xl" />
 
             {/* Project Image / Visual */}
-            <div className="relative h-48 w-full overflow-hidden">
-                <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-50 group-hover:opacity-70 transition-all duration-500`} />
-                <div className="absolute inset-0 flex items-center justify-center p-8">
-                    <motion.div
-                        whileHover={{ scale: 1.15, rotate: 5 }}
-                        transition={{ duration: 0.3 }}
-                        className="text-white font-black text-2xl tracking-tighter text-center opacity-90 group-hover:opacity-100 transition-all"
-                    >
-                        {project.title.split(' ').map((word, i) => (
-                            <span key={i} className="block leading-tight drop-shadow-lg">{word}</span>
-                        ))}
-                    </motion.div>
-                </div>
+            <div className="relative h-56 w-full overflow-hidden">
+                {project.image && project.image !== "/images/hero.jpg" ? (
+                    <>
+                        <Image
+                            src={project.image}
+                            alt={project.title}
+                            fill
+                            className="object-cover transition-transform duration-700 group-hover:scale-110"
+                        />
+                        <div className="absolute inset-0 bg-black/20 group-hover:bg-black/0 transition-colors duration-500" />
+                    </>
+                ) : (
+                    <div className={`absolute inset-0 bg-gradient-to-br ${project.color} opacity-80 group-hover:opacity-100 transition-all duration-500 flex items-center justify-center`}>
+                        <Folder className="text-white/20 w-16 h-16 group-hover:scale-110 transition-transform" />
+                    </div>
+                )}
 
                 {/* Category Badge */}
-                <div className="absolute top-4 left-4">
+                <div className="absolute top-4 left-4 z-10">
                     <span className="text-[10px] font-black px-3 py-1.5 rounded-full bg-black/60 backdrop-blur-md text-cyan-400 border border-cyan-500/40 uppercase tracking-[0.2em] shadow-lg">
                         {project.category}
                     </span>

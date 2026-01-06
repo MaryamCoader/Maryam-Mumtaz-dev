@@ -34,7 +34,7 @@ export default function Contact() {
     };
 
     return (
-        <Section id="contact" className="bg-[#030014] relative py-16 md:py-24 overflow-hidden">
+        <Section id="contact" className="bg-[#030014] relative py-20 md:py-32 overflow-hidden">
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />

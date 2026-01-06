@@ -226,13 +226,13 @@ export default function Hero() {
                                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-2xl opacity-40" />
                                 <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
                                     <Image
-                                        src="/images/hero.jpg"
+                                        src="/images/profile.png"
                                         alt="Maryam Mumtaz"
                                         fill
                                         className="object-cover transition-transform duration-700 hover:scale-105"
                                         priority
                                     />
-                                    <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-60" />
+                                    <div className="absolute inset-0 bg-gradient-to-t from-[#030014] via-transparent to-transparent opacity-40" />
 
                                     {/* Social Icons Pill directly on image */}
                                     <div className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-3 p-2 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 z-30">

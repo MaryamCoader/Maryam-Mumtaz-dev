@@ -1,82 +1,56 @@
 export const projectsData = [
     {
-        title: "AI Chat Assistant",
-        category: "AI / Automation",
-        description: "Intelligent conversational AI powered by OpenAI GPT-4, featuring context-aware responses, memory management, and multi-turn conversations.",
-        tech: ["OpenAI", "LangChain", "Next.js", "TypeScript"],
-        links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-cyan-500 to-blue-600"
-    },
-    {
-        title: "E-Commerce Platform",
+        title: "Modern E-Commerce Platform",
         category: "Full Stack",
-        description: "Modern e-commerce solution with real-time inventory, Stripe payments, order tracking, and admin dashboard for complete store management.",
+        description: "A comprehensive clothing e-commerce solution with real-time inventory, Stripe payments, order tracking, and a sleek modern UI.",
         tech: ["Next.js", "TypeScript", "Sanity CMS", "Stripe"],
-        links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
+        links: { github: "https://github.com/MaryamCoader", live: "https://e-commerce-website-liart-two.vercel.app/" },
+        image: "/images/e-commerce.PNG",
         color: "from-purple-500 to-pink-500"
     },
     {
-        title: "Portfolio Builder",
-        category: "UI/UX & Design",
-        description: "Drag-and-drop portfolio builder with customizable templates, dark mode, and export functionality for developers and designers.",
-        tech: ["React", "Tailwind", "Framer Motion", "Figma"],
+        title: "AI Spec-Driven Todo",
+        category: "AI / SaaS",
+        description: "Professional task management system built using Spec-Driven Development, evolving from a simple CLI to a Kubernetes-deployed AI agent system.",
+        tech: ["OpenAI", "Next.js", "Dapr", "Kubernetes"],
         links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-orange-400 to-red-500"
+        image: "/images/Todo-app.png",
+        color: "from-cyan-500 to-blue-600"
     },
     {
-        title: "Analytics Dashboard",
-        category: "Data Visualization",
-        description: "Real-time business intelligence dashboard with interactive charts, KPI tracking, and AI-powered insights for data-driven decisions.",
-        tech: ["Python", "Streamlit", "Plotly", "Pandas"],
+        title: "LearnFlow AI Platform",
+        category: "EdTech AI",
+        description: "Autonomous microservices-based learning platform featuring persistent memory and struggle detection with real-time skill acquisition.",
+        tech: ["Kafka", "Next.js 15", "Goose AI", "Dapr"],
         links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-green-400 to-emerald-600"
+        image: "/images/learnflow-app.PNG",
+        color: "from-blue-600 to-purple-600"
     },
     {
-        title: "Task Manager Pro",
-        category: "Productivity",
-        description: "Collaborative task management with real-time updates, team workspaces, priority tracking, and deadline notifications.",
-        tech: ["Next.js", "Supabase", "Pusher", "Tailwind"],
+        title: "Physical AI Textbook",
+        category: "AI Engineering",
+        description: "Innovative AI-native textbook platform for Humanoid Robotics, featuring custom RAG agents and Urdu language translation layers.",
+        tech: ["Docusaurus", "RAG", "Python", "Cloud Native"],
         links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-slate-700 to-slate-900"
+        image: "/images/physical Ai.png",
+        color: "from-emerald-500 to-teal-600"
     },
     {
-        title: "Weather Forecast AI",
-        category: "API Integration",
-        description: "Hyper-local weather predictions using machine learning models, providing accurate forecasts with beautiful visualizations.",
-        tech: ["JavaScript", "OpenWeather", "Chart.js", "ML5"],
+        title: "AI Intelligence Agent",
+        category: "Agentic AI",
+        description: "550+ agents ecosystem built using MCP protocols, focused on autonomous execution and system-wide automation patterns.",
+        tech: ["MCP", "OpenAI SDK", "LangChain", "n8n"],
         links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-blue-400 to-indigo-600"
+        image: "/images/hero.jpg",
+        color: "from-orange-500 to-rose-600"
     },
     {
-        title: "Social Media Scheduler",
-        category: "SaaS",
-        description: "Automate social media posts across platforms with AI-generated captions, optimal timing suggestions, and engagement analytics.",
-        tech: ["Python", "FastAPI", "Redis", "Celery"],
+        title: "Inventory Enterprise",
+        category: "Full Stack",
+        description: "Real-time inventory management with barcode scanning and multi-vendor supplier management systems.",
+        tech: ["PostgreSQL", "React", "Node.js", "Prisma"],
         links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-rose-500 to-pink-600"
-    },
-    {
-        title: "Inventory System",
-        category: "Enterprise",
-        description: "Enterprise-grade inventory management with barcode scanning, stock alerts, supplier management, and detailed reporting.",
-        tech: ["PostgreSQL", "Node.js", "Prisma", "React"],
-        links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-teal-400 to-emerald-500"
-    },
-    {
-        title: "Code Snippet Manager",
-        category: "Developer Tools",
-        description: "Organize and share code snippets with syntax highlighting, tagging system, and team collaboration features.",
-        tech: ["Next.js", "MongoDB", "Prism.js", "Tailwind"],
-        links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-violet-500 to-purple-600"
-    },
-    {
-        title: "Fitness Tracker",
-        category: "Health & Wellness",
-        description: "Track workouts, nutrition, and progress with AI-powered recommendations and personalized fitness plans.",
-        tech: ["React Native", "Firebase", "TensorFlow", "Charts"],
-        links: { github: "https://github.com/MaryamCoader", live: "https://github.com/MaryamCoader" },
-        color: "from-lime-400 to-green-500"
+        image: "/images/hero.jpg",
+        color: "from-slate-600 to-slate-900"
     }
 ];
