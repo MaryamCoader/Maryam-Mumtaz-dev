@@ -10,14 +10,16 @@ export default function Typewriter({ words }: { words: string[] }) {
 
     useEffect(() => {
         if (subIndex === words[index].length + 1 && !reverse) {
-            setTimeout(() => setReverse(true), 2000);
-            return;
+            const timeout = setTimeout(() => setReverse(true), 2000);
+            return () => clearTimeout(timeout);
         }
 
         if (subIndex === 0 && reverse) {
-            setReverse(false);
-            setIndex((prev) => (prev + 1) % words.length);
-            return;
+            const timeout = setTimeout(() => {
+                setReverse(false);
+                setIndex((prev) => (prev + 1) % words.length);
+            }, 100);
+            return () => clearTimeout(timeout);
         }
 
         const timeout = setTimeout(() => {

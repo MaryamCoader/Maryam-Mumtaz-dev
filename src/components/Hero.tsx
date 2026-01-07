@@ -4,11 +4,10 @@ import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
 import { ArrowRight, Github, Linkedin, Mail, Sparkles, Download } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useRef, useState, useMemo, useEffect } from "react";
+import { useMemo } from "react";
 import Typewriter from "./ui/Typewriter";
 
 export default function Hero() {
-    const [isHovered, setIsHovered] = useState(false);
 
     // Optimized mouse positions using useMotionValue to avoid re-renders
     const mouseX = useMotionValue(0);
@@ -57,22 +56,18 @@ export default function Hero() {
                     style={{ x: x1, y: y1 }}
                     animate={{ scale: [1, 1.2, 1] }}
                     transition={{ scale: { duration: 8, repeat: Infinity, ease: "easeInOut" } }}
-                    className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-gradient-to-br from-cyan-500/30 via-blue-500/20 to-transparent rounded-full blur-[120px] opacity-50"
+                    className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[120px] opacity-40"
                 />
                 <motion.div
                     style={{ x: x2, y: y2 }}
                     animate={{ scale: [1, 1.3, 1] }}
                     transition={{ scale: { duration: 10, repeat: Infinity, ease: "easeInOut" } }}
-                    className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-tl from-purple-500/30 via-pink-500/20 to-transparent rounded-full blur-[120px] opacity-50"
-                />
-                <motion.div
-                    style={{ x: x3, y: y3 }}
-                    animate={{ scale: [1, 1.15, 1] }}
-                    transition={{ scale: { duration: 7, repeat: Infinity, ease: "easeInOut" } }}
-                    className="absolute top-[40%] left-[50%] w-[600px] h-[600px] bg-gradient-to-r from-blue-500/20 via-indigo-500/15 to-transparent rounded-full blur-[100px] opacity-40"
+                    className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-tl from-blue-600/20 via-cyan-500/10 to-transparent rounded-full blur-[120px] opacity-40"
                 />
 
-                <div className="absolute inset-0 grid-background opacity-[0.05]" />
+                {/* Advanced AI Grid Mesh */}
+                <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))] opacity-[0.03]" />
+                <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-transparent to-[#030014]" />
 
                 <div className="absolute inset-0">
                     {particles.map((particle) => (
@@ -129,7 +124,7 @@ export default function Hero() {
                                 className="text-4xl md:text-5xl lg:text-6xl xl:text-7xl tracking-tight leading-none"
                             >
                                 <span className="text-white block font-black">MARYAM</span>
-                                <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 block font-light italic">
+                                <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 block font-light italic">
                                     MUMTAZ.
                                 </span>
                             </motion.h1>
@@ -216,14 +211,14 @@ export default function Hero() {
                             <motion.div
                                 animate={{ rotate: -360 }}
                                 transition={{ duration: 30, repeat: Infinity, ease: "linear" }}
-                                className="absolute -inset-16 border border-purple-500/10 rounded-full"
+                                className="absolute -inset-16 border border-blue-500/10 rounded-full"
                             />
 
                             <motion.div
                                 whileHover={{ scale: 1.02 }}
                                 className="relative w-[240px] h-[300px] md:w-[280px] md:h-[360px] lg:w-[320px] lg:h-[420px]"
                             >
-                                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-purple-500/20 to-blue-500/20 rounded-3xl blur-2xl opacity-40" />
+                                <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/20 via-blue-400/20 to-blue-500/20 rounded-3xl blur-2xl opacity-40" />
                                 <div className="relative w-full h-full rounded-3xl overflow-hidden border border-white/10 shadow-2xl bg-[#0a0a0a]">
                                     <Image
                                         src="/images/profile.png"
@@ -270,7 +265,7 @@ export default function Hero() {
 }
 
 // Social Link Component
-function SocialLink({ href, Icon }: { href: string; Icon: any }) {
+function SocialLink({ href, Icon }: { href: string; Icon: React.ElementType }) {
     return (
         <Link
             href={href}
@@ -282,15 +277,4 @@ function SocialLink({ href, Icon }: { href: string; Icon: any }) {
     );
 }
 
-// Floating Social Component
-function FloatingSocial({ href, Icon }: { href: string; Icon: any }) {
-    return (
-        <Link
-            href={href}
-            target="_blank"
-            className="w-11 h-11 rounded-full flex items-center justify-center text-slate-500 hover:text-cyan-400 transition-all group hover:scale-110"
-        >
-            <Icon size={20} className="group-hover:scale-125 transition-transform" />
-        </Link>
-    );
-}
+

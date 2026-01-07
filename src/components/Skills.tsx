@@ -2,7 +2,7 @@
 
 import Section from "./ui/Section";
 import { motion } from "framer-motion";
-import { Code, Palette, Database, BrainCircuit, Cloud, Server, Terminal } from "lucide-react";
+import { Code, Palette, BrainCircuit, Cloud, Server, Terminal } from "lucide-react";
 
 interface SkillItem {
     name: string;
@@ -44,7 +44,6 @@ const skillsData: SkillCategory[] = [
             { name: "MCP Protocol", level: 92 }
         ],
         tags: ["n8n", "Vector DBs", "RAG", "Subagents", "Skills"],
-        badge: "In Progress - PIAIC",
     },
     {
         title: "Cloud Platforms",
@@ -119,7 +118,7 @@ export default function Skills() {
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
@@ -134,7 +133,7 @@ export default function Skills() {
                             Technical
                         </span>
                         <h2 className="relative text-4xl md:text-6xl font-black text-white uppercase tracking-tight">
-                            Technical <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 italic font-light">Powerhouse</span>
+                            Technical <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 italic font-light">Powerhouse</span>
                         </h2>
                     </div>
                     <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium tracking-wide">
@@ -185,7 +184,7 @@ export default function Skills() {
                                                     whileInView={{ width: `${s.level}%` }}
                                                     viewport={{ once: true }}
                                                     transition={{ duration: 1.5, delay: 0.2, ease: "easeOut" }}
-                                                    className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600"
+                                                    className="h-full bg-gradient-to-r from-cyan-500 via-blue-500 to-cyan-400"
                                                 />
                                             </div>
                                         </div>

@@ -3,14 +3,12 @@
 import { Github, Linkedin, Mail, Heart, ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import Magnetic from "./ui/Magnetic";
-import { motion } from "framer-motion";
 
 const navLinks = [
     { name: "Home", href: "#home" },
     { name: "About", href: "#about" },
     { name: "Skills", href: "#skills" },
     { name: "Projects", href: "#projects" },
-    { name: "Education", href: "#education" },
     { name: "Contact", href: "#contact" },
 ];
 
@@ -34,7 +32,7 @@ export default function Footer() {
         <footer className="bg-[#030014] border-t border-white/5 pt-20 pb-10 relative overflow-hidden">
             {/* Artistic Background Elements */}
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
-            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px] pointer-events-none" />
+            <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
             <div className="container mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">

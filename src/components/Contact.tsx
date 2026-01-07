@@ -38,7 +38,7 @@ export default function Contact() {
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-purple-500/5 rounded-full blur-[100px]" />
+                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
@@ -53,11 +53,11 @@ export default function Contact() {
                             Get In Touch
                         </span>
                         <h2 className="relative text-4xl md:text-6xl font-black text-white uppercase tracking-tight">
-                            Let's Build <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-purple-600 italic font-light">Something</span>
+                            Let&apos;s Build <span className="text-gradient bg-clip-text text-transparent bg-gradient-to-r from-cyan-400 via-blue-500 to-blue-600 italic font-light">Something</span>
                         </h2>
                     </div>
                     <p className="text-slate-400 text-sm md:text-base max-w-2xl mx-auto font-medium tracking-wide">
-                        Available for new projects and collaborations. Let's create something extraordinary together.
+                        Available for new projects and collaborations. Let&apos;s create something extraordinary together.
                     </p>
                 </motion.div>
 
@@ -111,7 +111,7 @@ export default function Contact() {
                             <button
                                 type="submit"
                                 disabled={isSubmitting}
-                                className="w-full py-4 bg-gradient-to-r from-cyan-500 via-blue-500 to-purple-600 text-white font-bold uppercase tracking-widest rounded-xl hover:shadow-2xl hover:shadow-cyan-500/40 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+                                className="w-full py-4 bg-gradient-to-r from-cyan-600 via-blue-600 to-blue-700 text-white font-bold uppercase tracking-widest rounded-xl hover:shadow-2xl hover:shadow-cyan-500/40 transition-all active:scale-[0.98] disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center gap-2"
                             >
                                 {isSubmitting ? "Sending..." : "Send Message"}
                                 <Send size={16} />
@@ -171,7 +171,7 @@ export default function Contact() {
     );
 }
 
-function SocialItem({ href, icon, label, value }: { href: string, icon: any, label: string, value: string }) {
+function SocialItem({ href, icon, label, value }: { href: string, icon: React.ReactNode, label: string, value: string }) {
     return (
         <a
             href={href}

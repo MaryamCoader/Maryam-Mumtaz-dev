@@ -12,11 +12,11 @@ export default function Projects() {
     const featuredProjects = projectsData;
 
     return (
-        <Section id="projects" className="bg-[#030014] relative py-20 md:py-32 overflow-hidden">
-            {/* Background Orbs */}
+        <Section id="projects" className="bg-[#030014] relative py-16 md:py-24 overflow-hidden">
+            {/* Background Orbs - Theme Synced */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-[10%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />
+                <div className="absolute top-[10%] right-[-5%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]" />
+                <div className="absolute bottom-[10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4">
@@ -39,7 +39,7 @@ export default function Projects() {
                     </p>
                 </motion.div>
 
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-12">
                     {featuredProjects.map((project, idx) => (
                         <ProjectCard key={idx} project={project} index={idx} />
                     ))}
@@ -49,10 +49,10 @@ export default function Projects() {
                     <Link
                         href="https://github.com/MaryamCoader"
                         target="_blank"
-                        className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-bold uppercase tracking-widest rounded-2xl hover:bg-white/10 transition-all shadow-2xl group active:scale-95"
+                        className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black uppercase tracking-widest rounded-2xl hover:bg-white/10 hover:border-cyan-500/30 transition-all shadow-2xl group active:scale-95 text-xs"
                     >
-                        View All Projects
-                        <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+                        Explore GitHub Repo
+                        <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                     </Link>
                 </div>
             </div>
