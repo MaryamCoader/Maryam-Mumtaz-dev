@@ -15,8 +15,8 @@ export default function Projects() {
         <Section id="projects" className="bg-[#030014] relative py-16 md:py-24 overflow-hidden">
             {/* Background Orbs - Theme Synced */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[10%] right-[-5%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]" />
-                <div className="absolute bottom-[10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/10 rounded-full blur-[120px]" />
+                <div className="absolute top-[10%] right-[-5%] w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[100px] opacity-20" />
+                <div className="absolute bottom-[10%] left-[-5%] w-[500px] h-[500px] bg-blue-500/5 rounded-full blur-[100px] opacity-20" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4">

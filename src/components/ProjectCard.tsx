@@ -26,7 +26,7 @@ export default function ProjectCard({ project, index }: ProjectCardProps) {
             viewport={{ once: true }}
             transition={{ delay: index * 0.1, duration: 0.6 }}
             whileHover={{ y: -10 }}
-            className="group relative rounded-[2rem] overflow-hidden bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 shadow-3xl h-[480px] flex flex-col"
+            className="group relative rounded-[2rem] overflow-hidden bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-cyan-500/50 transition-all duration-500 shadow-3xl h-[480px] flex flex-col"
         >
             {/* Animated Glow Effect */}
             <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-blue-500/0 to-transparent group-hover:from-cyan-500/5 group-hover:via-blue-500/5 transition-all duration-500 rounded-[2rem]" />

@@ -29,22 +29,8 @@ export default function About() {
         <Section id="about" className="bg-[#030014] relative py-20 md:py-28 overflow-hidden">
             {/* Background Orbs for Consistency - Synced with Hero */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <motion.div
-                    animate={{
-                        scale: [1, 1.2, 1],
-                        opacity: [0.3, 0.5, 0.3]
-                    }}
-                    transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute top-[10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[120px]"
-                />
-                <motion.div
-                    animate={{
-                        scale: [1, 1.3, 1],
-                        opacity: [0.3, 0.4, 0.3]
-                    }}
-                    transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
-                    className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-tl from-blue-500/20 via-cyan-500/10 to-transparent rounded-full blur-[120px]"
-                />
+                <div className="absolute top-[10%] right-[-5%] w-[600px] h-[600px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[100px] opacity-30" />
+                <div className="absolute bottom-[-10%] left-[-5%] w-[600px] h-[600px] bg-gradient-to-tl from-blue-500/20 via-cyan-500/10 to-transparent rounded-full blur-[100px] opacity-30" />
             </div>
 
             <div className="relative z-10 max-w-6xl mx-auto px-4 md:px-6">
@@ -77,7 +63,7 @@ export default function About() {
                         viewport={{ once: true }}
                         className="w-full lg:w-[320px] flex-shrink-0"
                     >
-                        <div className="bg-white/5 backdrop-blur-xl rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-full flex flex-col">
+                        <div className="bg-white/5 backdrop-blur-md rounded-2xl overflow-hidden border border-white/10 shadow-2xl h-full flex flex-col">
                             {/* Header matched with card background - with a slight glow */}
                             <div className="h-32 bg-gradient-to-b from-white/5 to-transparent border-b border-white/10 flex-shrink-0 relative overflow-hidden">
                                 <div className="absolute inset-0 bg-gradient-to-tr from-cyan-500/10 via-blue-500/10 to-blue-400/10 blur-xl px-6" />
@@ -132,7 +118,7 @@ export default function About() {
                         initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="flex-1 w-full bg-white/5 backdrop-blur-xl rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
+                        className="flex-1 w-full bg-white/5 backdrop-blur-md rounded-2xl border border-white/10 shadow-2xl overflow-hidden"
                     >
                         <div className="flex overflow-x-auto gap-1 p-2 border-b border-white/10 bg-white/[0.02] scrollbar-hide">
                             {tabs.map((tab) => (

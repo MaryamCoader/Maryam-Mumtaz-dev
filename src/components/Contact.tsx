@@ -37,8 +37,8 @@ export default function Contact() {
         <Section id="contact" className="bg-[#030014] relative py-20 md:py-32 overflow-hidden">
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
+                <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px] opacity-20" />
+                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] opacity-20" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
@@ -67,7 +67,7 @@ export default function Contact() {
                         initial={{ opacity: 0, x: -20 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        className="bg-white/[0.03] backdrop-blur-xl border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl"
+                        className="bg-white/[0.03] backdrop-blur-md border border-white/10 p-6 md:p-8 rounded-3xl shadow-2xl"
                     >
                         <form onSubmit={handleSubmit} className="space-y-5">
                             <div className="grid md:grid-cols-2 gap-5">

@@ -54,15 +54,11 @@ export default function Hero() {
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
                     style={{ x: x1, y: y1 }}
-                    animate={{ scale: [1, 1.2, 1] }}
-                    transition={{ scale: { duration: 8, repeat: Infinity, ease: "easeInOut" } }}
-                    className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[120px] opacity-40"
+                    className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[120px] opacity-40 will-change-transform"
                 />
                 <motion.div
                     style={{ x: x2, y: y2 }}
-                    animate={{ scale: [1, 1.3, 1] }}
-                    transition={{ scale: { duration: 10, repeat: Infinity, ease: "easeInOut" } }}
-                    className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-tl from-blue-600/20 via-cyan-500/10 to-transparent rounded-full blur-[120px] opacity-40"
+                    className="absolute bottom-[-10%] right-[-10%] w-[800px] h-[800px] bg-gradient-to-tl from-blue-600/20 via-cyan-500/10 to-transparent rounded-full blur-[120px] opacity-40 will-change-transform"
                 />
 
                 {/* Advanced AI Grid Mesh */}
@@ -70,10 +66,10 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-gradient-to-b from-[#030014] via-transparent to-[#030014]" />
 
                 <div className="absolute inset-0">
-                    {particles.map((particle) => (
+                    {particles.slice(0, 12).map((particle) => (
                         <motion.div
                             key={particle.id}
-                            className="absolute w-1 h-1 bg-cyan-400/30 rounded-full"
+                            className="absolute w-1 h-1 bg-cyan-400/30 rounded-full will-change-transform"
                             style={{
                                 left: `${particle.left}%`,
                                 top: `${particle.top}%`,
@@ -86,6 +82,7 @@ export default function Hero() {
                                 duration: particle.duration,
                                 repeat: Infinity,
                                 delay: particle.delay,
+                                ease: "linear"
                             }}
                         />
                     ))}

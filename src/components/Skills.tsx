@@ -117,8 +117,8 @@ export default function Skills() {
         <Section id="skills" className="relative bg-[#030014] py-16 md:py-24 overflow-hidden">
             {/* Background Orbs for Consistency */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px]" />
-                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
+                <div className="absolute top-[30%] left-[-5%] w-[400px] h-[400px] bg-cyan-500/5 rounded-full blur-[100px] opacity-20" />
+                <div className="absolute bottom-[20%] right-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] opacity-20" />
             </div>
 
             <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
@@ -153,10 +153,10 @@ export default function Skills() {
                             key={idx}
                             variants={item}
                             whileHover={{ y: -5 }}
-                            className="relative bg-white/[0.03] backdrop-blur-xl border border-white/10 hover:border-cyan-500/50 transition-all duration-500 p-6 lg:p-8 rounded-3xl group flex flex-col h-full shadow-2xl overflow-hidden"
+                            className="relative bg-white/[0.03] backdrop-blur-md border border-white/10 hover:border-cyan-500/50 transition-all duration-500 p-6 lg:p-8 rounded-3xl group flex flex-col h-full shadow-2xl overflow-hidden"
                         >
-                            {/* Animated Background Gradient for intensity */}
-                            <div className="absolute -inset-[100%] bg-[conic-gradient(from_0deg,transparent_0,transparent_70%,rgba(6,182,212,0.1)_80%,transparent_90%)] animate-[spin_8s_linear_infinite] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+                            {/* Simple Hover Glow */}
+                            <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/0 via-cyan-500/0 to-transparent group-hover:from-cyan-500/5 transition-opacity duration-500 opacity-0 group-hover:opacity-100" />
 
                             <div className="relative z-10 flex flex-col h-full">
                                 <div className="mb-4 w-12 h-12 rounded-xl bg-cyan-500/10 border border-cyan-500/20 flex items-center justify-center group-hover:bg-cyan-500/20 transition-all duration-500">
