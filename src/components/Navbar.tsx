@@ -1,10 +1,9 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import { Menu, X, Github, Linkedin } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
-import { cn } from "@/lib/utils";
 import Magnetic from "./ui/Magnetic";
 
 const navLinks = [
@@ -17,24 +16,12 @@ const navLinks = [
 
 export default function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
-    const [scrolled, setScrolled] = useState(false);
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 20);
-        };
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll);
-    }, []);
 
     return (
         <nav
-            className={cn(
-                "fixed top-0 w-full z-50 transition-all duration-300",
-                scrolled ? "glass py-4" : "bg-transparent py-6"
-            )}
+            className="absolute top-0 w-full z-50 bg-transparent py-8"
         >
-            <div className="container mx-auto px-6 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto px-6 flex justify-between items-center">
                 <Link href="/" className="group flex items-center gap-3">
                     <div className="relative w-9 h-9 flex items-center justify-center">
                         <div className="absolute inset-0 bg-white rotate-45 group-hover:rotate-90 transition-transform duration-500 rounded-sm" />
@@ -42,7 +29,7 @@ export default function Navbar() {
                     </div>
                     <div className="flex flex-col">
                         <span className="text-white font-black text-base tracking-tighter leading-none">MARYAM.</span>
-                        <span className="text-cyan-400 text-[6px] font-bold tracking-[0.4em] uppercase">Precision Studio</span>
+                        <span className="text-cyan-400 text-[6px] font-bold tracking-[0.4em] uppercase">Full Stack Developer</span>
                     </div>
                 </Link>
 
@@ -61,7 +48,7 @@ export default function Navbar() {
                     ))}
                     <div className="flex items-center space-x-4 pl-6 ml-4 border-l border-white/10">
                         <Magnetic>
-                            <a href="https://github.com/MaryamCoader" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                            <a href="https://github.com/MaryamMumtaz-piaic" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                                 <Github size={18} />
                             </a>
                         </Magnetic>
@@ -103,7 +90,7 @@ export default function Navbar() {
                                 </Link>
                             ))}
                             <div className="flex items-center space-x-6 pt-4 border-t border-slate-700">
-                                <a href="https://github.com/MaryamCoader" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
+                                <a href="https://github.com/MaryamMumtaz-piaic" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">
                                     <Github size={20} />
                                 </a>
                                 <a href="https://www.linkedin.com/in/maryam-mumtaz-315358361/" target="_blank" rel="noopener noreferrer" className="text-slate-400 hover:text-white transition-colors">

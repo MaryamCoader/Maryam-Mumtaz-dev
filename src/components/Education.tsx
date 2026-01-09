@@ -44,7 +44,7 @@ export default function Education() {
                 <div className="absolute bottom-[20%] left-[-5%] w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px]" />
             </div>
 
-            <div className="relative z-10 max-w-7xl mx-auto px-4 md:px-6">
+            <div className="relative z-10 max-w-7xl mx-auto px-6">
                 <motion.div
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
@@ -64,7 +64,7 @@ export default function Education() {
                     </p>
                 </motion.div>
 
-                <div className="relative max-w-4xl mx-auto">
+                <div className="relative">
                     {/* Vertical Line */}
                     <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500 via-blue-500 to-transparent transform md:-translate-x-1/2 opacity-20" />
 

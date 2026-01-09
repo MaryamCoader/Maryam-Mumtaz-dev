@@ -50,7 +50,7 @@ export default function Experience() {
                     </p>
                 </motion.div>
 
-                <div className="max-w-4xl mx-auto">
+                <div>
                     {experienceData.map((exp, idx) => (
                         <motion.div
                             key={idx}

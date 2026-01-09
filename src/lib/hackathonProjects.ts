@@ -33,7 +33,7 @@ export const hackathonProjects: HackathonProject[] = [
         achievements: "Built a pioneer platform for AI-native education, enabling personalized technical learning and automated content translation for diverse students.",
         image: "/images/physical Ai.png",
         links: {
-            github: "https://github.com/MaryamCoader",
+            github: "https://github.com/MaryamMumtaz-piaic",
             live: "https://ai-native-book-iota.vercel.app/"
         },
         color: "from-orange-500 to-red-600"
@@ -55,7 +55,7 @@ export const hackathonProjects: HackathonProject[] = [
         achievements: "Successfully implemented the 'Architecture of Intelligence' without writing manual boilerplate, mastering modern AIOps and distributed systems.",
         image: "/images/Todo-app.png",
         links: {
-            github: "https://github.com/MaryamCoader",
+            github: "https://github.com/MaryamMumtaz-piaic",
             live: "https://todo-app-sigma-hazel-46.vercel.app/"
         },
         color: "from-cyan-500 to-teal-500"
@@ -77,7 +77,7 @@ export const hackathonProjects: HackathonProject[] = [
         achievements: "Achieved 90%+ token reduction using advanced execution patterns and established a library of portable AI skills for autonomous infrastructure.",
         image: "/images/learnflow-app.PNG",
         links: {
-            github: "https://github.com/MaryamCoader",
+            github: "https://github.com/MaryamMumtaz-piaic",
             live: "https://frontend-rho-seven-ssq2gwtp54.vercel.app/"
         },
         color: "from-purple-600 to-blue-600"

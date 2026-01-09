@@ -241,7 +241,7 @@ export default function Hero() {
 
                                     {/* Social Icons Pill directly on image */}
                                     <div className="absolute right-3 top-1/2 -translate-y-1/2 flex flex-col gap-3 p-2 bg-black/30 backdrop-blur-xl rounded-full border border-white/10 z-30">
-                                        <SocialLink href="https://github.com/MaryamCoader" Icon={Github} />
+                                        <SocialLink href="https://github.com/MaryamMumtaz-piaic" Icon={Github} />
                                         <SocialLink href="https://linkedin.com/in/maryam-mumtaz-315358361/" Icon={Linkedin} />
                                         <SocialLink href="mailto:maryamqureshimumtazm.a@gmail.com" Icon={Mail} />
                                     </div>

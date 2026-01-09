@@ -47,7 +47,7 @@ export default function Projects() {
 
                 <div className="mt-20 text-center">
                     <Link
-                        href="https://github.com/MaryamCoader"
+                        href="https://github.com/MaryamMumtaz-piaic"
                         target="_blank"
                         className="inline-flex items-center gap-4 px-8 py-4 bg-white/5 backdrop-blur-md border border-white/10 text-white font-black uppercase tracking-widest rounded-2xl hover:bg-white/10 hover:border-cyan-500/30 transition-all shadow-2xl group active:scale-95 text-xs"
                     >

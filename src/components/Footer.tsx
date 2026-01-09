@@ -20,7 +20,7 @@ const expertise = [
 ];
 
 const socials = [
-    { icon: Github, href: "https://github.com/MaryamCoader", label: "Github" },
+    { icon: Github, href: "https://github.com/MaryamMumtaz-piaic", label: "Github" },
     { icon: Linkedin, href: "https://linkedin.com/in/maryam-mumtaz-315358361/", label: "LinkedIn" },
     { icon: Mail, href: "mailto:maryamqureshimumtazm.a@gmail.com", label: "Email" },
 ];
@@ -34,7 +34,7 @@ export default function Footer() {
             <div className="absolute top-0 left-1/4 w-[500px] h-[500px] bg-cyan-500/5 rounded-full blur-[120px] pointer-events-none" />
             <div className="absolute bottom-0 right-1/4 w-[400px] h-[400px] bg-blue-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-            <div className="container mx-auto px-6 relative z-10">
+            <div className="max-w-7xl mx-auto px-6 relative z-10">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
                     {/* Brand Section */}
                     <div className="space-y-6">
@@ -45,7 +45,7 @@ export default function Footer() {
                             </div>
                             <div className="flex flex-col">
                                 <span className="text-white font-black text-lg tracking-tighter leading-none text-glow">MARYAM.</span>
-                                <span className="text-cyan-400 text-[8px] font-bold tracking-[0.4em] uppercase">Precision Studio</span>
+                                <span className="text-cyan-400 text-[8px] font-bold tracking-[0.4em] uppercase">Full Stack Developer</span>
                             </div>
                         </Link>
                         <p className="text-slate-400 text-sm leading-relaxed max-w-xs">
@@ -136,7 +136,7 @@ export default function Footer() {
                         <div className="flex items-center gap-2 text-slate-500 text-[10px] font-medium tracking-wider uppercase">
                             <span>Crafted with</span>
                             <Heart size={10} className="text-red-500 fill-red-500 animate-pulse" />
-                            <span>in Precision Studio</span>
+                            <span>as Full Stack Developer</span>
                         </div>
                         <div className="h-4 w-[1px] bg-white/10 hidden md:block" />
                         <Link href="#home" className="text-slate-500 hover:text-white text-[10px] font-medium tracking-wider uppercase transition-colors">
