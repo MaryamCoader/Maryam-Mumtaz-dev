@@ -1,7 +1,7 @@
 "use client";
 
 import { motion, useMotionValue, useSpring, useTransform } from "framer-motion";
-import { ArrowRight, Github, Linkedin, Mail, Sparkles, Download } from "lucide-react";
+import { ArrowRight, Github, Linkedin, Mail, Sparkles, Download, ExternalLink } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { useMemo } from "react";
@@ -51,7 +51,7 @@ export default function Hero() {
             className="relative w-full min-h-screen flex items-center justify-center bg-[#030014] py-20 md:py-24 lg:py-32 overflow-hidden"
         >
             {/* Interactive Background Layers */}
-            <div className="absolute inset-0 overflow-hidden pointer-events-none">
+            <div className="absolute inset-0 overflow-hidden pointer-events-none z-0">
                 <motion.div
                     style={{ x: x1, y: y1 }}
                     className="absolute top-[-20%] left-[-10%] w-[700px] h-[700px] bg-gradient-to-br from-cyan-500/20 via-blue-500/10 to-transparent rounded-full blur-[120px] opacity-40 will-change-transform"
@@ -96,7 +96,7 @@ export default function Hero() {
                         initial={{ opacity: 0, x: -50 }}
                         animate={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8, ease: [0.23, 1, 0.32, 1] }}
-                        className="flex flex-col space-y-6"
+                        className="flex flex-col space-y-6 relative z-10"
                     >
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
@@ -165,29 +165,42 @@ export default function Hero() {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ delay: 0.7 }}
-                            className="flex flex-wrap items-center gap-3 pt-6"
+                            className="flex items-center gap-2 md:gap-4 pt-6"
                         >
-                            <Link href="#contact" className="group/btn relative px-6 py-4 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-xl overflow-hidden shadow-[0_0_20px_rgba(8,145,178,0.3)] hover:shadow-[0_0_30px_rgba(8,145,178,0.5)] transition-all duration-300">
-                                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover/btn:translate-y-0 transition-transform duration-300" />
-                                <span className="relative flex items-center gap-2 text-white font-bold uppercase tracking-wider text-xs md:text-sm">
-                                    Start Project <ArrowRight size={18} className="group-hover/btn:translate-x-1 transition-transform" />
+                            {/* 1. Explore Projects - Primary */}
+                            <Link
+                                href="#projects"
+                                className="group relative h-12 md:h-14 px-4 md:px-8 bg-gradient-to-r from-cyan-600 to-blue-600 rounded-2xl overflow-hidden shadow-[0_10px_20px_-10px_rgba(8,145,178,0.5)] hover:shadow-[0_15px_30px_-10px_rgba(8,145,178,0.6)] transition-all duration-300 flex items-center justify-center shrink-0 whitespace-nowrap"
+                            >
+                                <div className="absolute inset-0 bg-white/10 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+                                <span className="relative flex items-center gap-2 text-white font-black uppercase tracking-widest text-[9px] md:text-sm">
+                                    Projects <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                                 </span>
                             </Link>
 
-                            <div className="flex items-center gap-3">
-                                <Link href="#projects" className="px-6 py-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl text-slate-200 font-bold uppercase tracking-wider text-xs md:text-sm hover:bg-white/10 hover:border-white/20 transition-all">
-                                    View Portfolio
-                                </Link>
+                            {/* 2. Web Resume - Secondary */}
+                            <a
+                                href="https://maryam-resume.vercel.app/"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="h-12 md:h-14 px-3 md:px-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-slate-300 font-black uppercase tracking-widest text-[9px] md:text-xs hover:bg-white/10 hover:border-cyan-500/30 hover:text-cyan-400 transition-all flex items-center justify-center gap-2 md:gap-3 shrink-0 group whitespace-nowrap"
+                            >
+                                <ExternalLink size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="hidden sm:inline">Web Resume</span>
+                                <span className="sm:hidden">Web</span>
+                            </a>
 
-                                <a
-                                    href="/resume.pdf"
-                                    target="_blank"
-                                    className="p-4 bg-white/5 backdrop-blur-md border border-white/10 rounded-xl text-slate-400 hover:text-white hover:bg-white/10 transition-all group"
-                                    aria-label="Download Resume"
-                                >
-                                    <Download size={18} />
-                                </a>
-                            </div>
+                            {/* 3. Resume PDF - Secondary */}
+                            <a
+                                href="/Maryam.pdf"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="h-12 md:h-14 px-3 md:px-6 bg-white/5 backdrop-blur-md border border-white/10 rounded-2xl text-slate-300 font-black uppercase tracking-widest text-[9px] md:text-xs hover:bg-white/10 hover:border-blue-500/30 hover:text-blue-400 transition-all flex items-center justify-center gap-2 md:gap-3 shrink-0 group whitespace-nowrap"
+                            >
+                                <Download size={16} className="group-hover:scale-110 transition-transform" />
+                                <span className="hidden sm:inline">Resume PDF</span>
+                                <span className="sm:hidden">PDF</span>
+                            </a>
                         </motion.div>
                     </motion.div>
 
